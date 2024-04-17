@@ -1,0 +1,40 @@
+/* Write your code here. */
+.list-container {
+  list-style-type: none;
+  width: 32%;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .list-container {
+    width: 25%;
+  }
+}
+
+.emoji-button {
+  background-color: #ffffff33;
+  width: 98%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid #ffffff30;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+@media screen and (min-width: 768px) {
+  .emoji-button {
+    width: 94%;
+  }
+}
+.emoji-image {
+  width: 60%;
+}
+
+@media screen and (min-width: 768px) {
+  .emoji-image {
+    width: 40%;
+  }
+}

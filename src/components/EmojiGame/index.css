@@ -1,0 +1,33 @@
+/* Write your code here. */
+.background-container {
+  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+  min-height: 100vh;
+}
+
+/* .emoji-card-br-container {
+  border: 2px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+} */
+
+.emoji-card-container {
+  width: 90%;
+  /* border: 2px solid red; */
+  padding-left: 0px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .emoji-card-container {
+    width: 75%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}

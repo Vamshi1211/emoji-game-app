@@ -1,0 +1,117 @@
+/* Write your code here. */
+.win-lose-bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+@media screen and (min-width: 768px) {
+  .win-lose-bg-container {
+    height: 90vh;
+  }
+}
+
+.win-or-lose-container {
+  /* border: 2px solid green; */
+  width: 80%;
+  background-color: #ffffff33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .win-or-lose-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.lose-image {
+  width: 40%;
+  order: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .lose-image {
+    width: 50%;
+    order: 2;
+  }
+}
+
+.result-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* border: 2px solid blue; */
+  order: 2;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .result-container {
+    order: 1;
+  }
+}
+
+.result-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .result-heading {
+    font-size: 36px;
+  }
+}
+
+.best-score {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .best-score {
+    font-size: 24px;
+  }
+}
+
+.score-value {
+  color: #6a59ff;
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 0px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .score-value {
+    font-size: 36px;
+  }
+}
+
+.play-again-button {
+  background-color: #ffce27;
+  color: #3d3d3d;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Roboto';
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
