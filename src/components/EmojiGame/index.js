@@ -22,26 +22,31 @@ class EmojiGame extends Component {
   state = {
     clickedEmojisList: [],
     score: 0,
-    initialTopScore: 0,
-    topScore: [],
+    topScore: 0,
     isPlayAgain: false,
   }
 
   onClickPlayAgain = () => {
-    const {topScore} = this.state
     this.setState(previousState => ({
       isPlayAgain: !previousState.isPlayAgain,
       score: 0,
       clickedEmojisList: [],
-      topScore: [],
-      initialTopScore: Math.max(topScore),
     }))
   }
 
   finishGameAndSetTopScore = emojisLength => {
-    this.setState(previousState => ({
-      topScore: [...previousState.topScore, emojisLength],
-      initialTopScore: previousState.initialTopScore + emojisLength,
+    const initialTopScore = emojisLength
+    const {topScore} = this.state
+    let topMostScore
+
+    if (initialTopScore > topScore) {
+      topMostScore = initialTopScore
+    } else {
+      topMostScore = topScore
+    }
+
+    this.setState(() => ({
+      topScore: topMostScore,
       isPlayAgain: false,
     }))
   }
@@ -71,9 +76,10 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {score, isPlayAgain, initialTopScore, clickedEmojisList} = this.state
+    const {score, isPlayAgain, topScore} = this.state
     // console.log(clickedEmojisList)
-    console.log(clickedEmojisList)
+    // console.log(clickedEmojisList)
+    console.log(topScore)
 
     const shuffledEmojisList = () => {
       const {emojisList} = this.props
@@ -83,18 +89,17 @@ class EmojiGame extends Component {
     return (
       <div className="background-container">
         <NavBar
-          setTopScore={initialTopScore}
+          setTopScore={topScore}
           score={score}
           playAgainValue={isPlayAgain}
-          topScoreValue={initialTopScore}
         />
 
-        {initialTopScore !== 0 && isPlayAgain === false ? (
+        {topScore !== 0 && isPlayAgain === false ? (
           <WinOrLoseCard
             totalScore={score}
             playAgain={this.onClickPlayAgain}
             playAgainValue={isPlayAgain}
-            topScoreValue={initialTopScore}
+            topScoreValue={topScore}
           />
         ) : (
           <ul className="emoji-card-container">

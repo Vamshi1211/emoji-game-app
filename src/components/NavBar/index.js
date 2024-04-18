@@ -18,7 +18,7 @@ const NavBar = props => {
         {setTopScore === 0 || playAgainValue ? (
           <div className="score-card">
             <p className="score">Score: {score}</p>
-            <p className="top-score">Top Score:{setTopScore}</p>
+            <p className="top-score">Top Score: {setTopScore}</p>
           </div>
         ) : (
           ''
